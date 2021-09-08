@@ -28,8 +28,6 @@ class MainActivity : ComponentActivity() {
              Column {
 
                  StateMenajement()
-
-
              }
 
             }
