@@ -4,9 +4,7 @@ import android.os.Bundle
 import android.widget.CheckBox
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.Checkbox
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -28,11 +26,8 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
              Column {
 
-                 Row(modifier = Modifier.padding(10.dp) , verticalAlignment = Alignment.CenterVertically){
+                 StateMenajement()
 
-                     val checkboxState =  mutableStateOf(true)
-                     Checkbox(checked = checkboxState.value , onCheckedChange = {checkboxState.value = it})
-                 }
 
              }
 
@@ -44,6 +39,14 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun StateMenajement() {
 
+    Row(modifier = Modifier.padding(10.dp) , verticalAlignment = Alignment.CenterVertically){
+        val init : Boolean = false
+        val checkboxState =  mutableStateOf(init)
+        Checkbox(checked = checkboxState.value , onCheckedChange = {checkboxState.value = it})
+    }
+
+    Spacer(modifier = Modifier.padding(4.dp))
+    Text("Check Box")
 
 
 
