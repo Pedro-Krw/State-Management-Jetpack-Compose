@@ -45,10 +45,6 @@ fun StateMenajement() {
         Spacer(modifier = Modifier.padding(4.dp))
         Text("Check Box" , color = Color.White)
     }
-
-
-
-
 }
 
 @Preview(showBackground = true , showSystemUi = true)
