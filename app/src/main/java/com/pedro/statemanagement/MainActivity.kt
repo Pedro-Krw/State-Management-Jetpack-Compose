@@ -44,6 +44,16 @@ fun StateMenajement() {
         Checkbox(checked = checkboxState.value , onCheckedChange = {checkboxState.value = it})
         Spacer(modifier = Modifier.padding(4.dp))
         Text("Check Box" , color = Color.White)
+
+    }
+
+    Row(modifier = Modifier.padding(10.dp) , horizontalArrangement = Arrangement.Center){
+        val init : Boolean = false
+        val checkboxState =  remember { mutableStateOf(init) }
+        Checkbox(checked = checkboxState.value , onCheckedChange = {checkboxState.value = it})
+        Spacer(modifier = Modifier.padding(4.dp))
+        Text("Check Box 2" , color = Color.White)
+
     }
 }
 
