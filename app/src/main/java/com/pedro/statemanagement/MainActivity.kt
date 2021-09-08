@@ -1,15 +1,19 @@
 package com.pedro.statemanagement
 
 import android.os.Bundle
+import android.widget.CheckBox
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Checkbox
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -24,6 +28,12 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
              Column {
 
+                 Row(modifier = Modifier.padding(10.dp) , verticalAlignment = Alignment.CenterVertically){
+
+                     val checkboxState =  mutableStateOf(true)
+                     Checkbox(checked = checkboxState.value , onCheckedChange = {checkboxState.value = it})
+                 }
+
              }
 
             }
@@ -34,10 +44,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun StateMenajement() {
 
-   Row(modifier = Modifier.padding(10.dp) , verticalAlignment = Alignment.CenterVertically){
-
-       val checkBox
-   }
 
 
 
