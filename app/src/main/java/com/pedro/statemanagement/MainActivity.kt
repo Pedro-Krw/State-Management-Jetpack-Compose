@@ -14,6 +14,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.pedro.statemanagement.ui.theme.StateManagementTheme
@@ -41,10 +42,10 @@ fun StateMenajement() {
 
     Row(modifier = Modifier.padding(10.dp) , horizontalArrangement = Arrangement.Center){
         val init : Boolean = false
-        val checkboxState =  mutableStateOf(init)
+        val checkboxState =  remember { mutableStateOf(init) }
         Checkbox(checked = checkboxState.value , onCheckedChange = {checkboxState.value = it})
         Spacer(modifier = Modifier.padding(4.dp))
-        Text("Check Box")
+        Text("Check Box" , color = Color.White)
     }
 
 
