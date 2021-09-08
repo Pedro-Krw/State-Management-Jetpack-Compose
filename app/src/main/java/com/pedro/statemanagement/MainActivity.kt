@@ -39,14 +39,14 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun StateMenajement() {
 
-    Row(modifier = Modifier.padding(10.dp) , verticalAlignment = Alignment.CenterVertically){
+    Row(modifier = Modifier.padding(10.dp) , horizontalArrangement = Arrangement.Center){
         val init : Boolean = false
         val checkboxState =  mutableStateOf(init)
         Checkbox(checked = checkboxState.value , onCheckedChange = {checkboxState.value = it})
+        Spacer(modifier = Modifier.padding(4.dp))
+        Text("Check Box")
     }
 
-    Spacer(modifier = Modifier.padding(4.dp))
-    Text("Check Box")
 
 
 
