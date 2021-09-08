@@ -36,6 +36,12 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
+fun ConstraintLayout(){
+
+}
+
+
+@Composable
 fun StateMenajement() {
 
     Row(modifier = Modifier.padding(10.dp) , horizontalArrangement = Arrangement.Center){
@@ -57,7 +63,12 @@ fun StateMenajement() {
     }
 }
 
-@Preview(showBackground = true , showSystemUi = true)
+
+
+
+@Preview(
+    showBackground = true ,
+    showSystemUi = true)
 @Composable
 fun DefaultPreview() {
     StateManagementTheme {
